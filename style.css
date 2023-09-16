@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+*{
+    padding: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+    overflow: hidden;
+    color: 	#03223f;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    width: 90%;
+    height: 80vh;
+    background-color: #2009d4;
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+}
+
+button{
+    padding: 4px;
+    border: none;
+    background-color: rgba(219, 235, 248, 0.9);
+    cursor: pointer;
+    border: solid #4223df 2px;
+    border-radius: 10px; 
+}
+
+button:hover{
+    border: solid rgba(240,248,255, 0.9) 2px;
+    color: rgba(240,248,255, 0.9);
+    background-color: #c26b71;
+    transition: 0.3s;
+}
+
+.container{
+    background-color: rgba(240,248,255, 0.9);
+    height: 70vh;
+    width: 70%;
+    border: solid #038bbb 2px;
+    padding: 1rem;
+    border-radius: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title{
+    width: 100%;
+    border-bottom: solid 2px #4223df;
+}
+
+.root{
+    height: 7vh;
+}
+
+.Exercicio4{
+    display: none;
+    justify-content: space-evenly;
+    flex-direction: column;
+    width: 50%;
+    height: 25%;
+}
+
+input{
+    width: 65%;
+    border-radius: 4px;
+    padding: 6px;
+    color: #ffffff;
+    border: none;
+    background-color: #0bae97;
+    outline: none;
+}
+
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.soma{
+    border-radius: 4px;
+    padding: 10px 30px;
+    width: 100px;
+    text-align: center;
+}

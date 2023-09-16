@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+
+</head>
+
+<body>
+  <div class="menu">
+    <button onclick="exercicio1()">Exercicio1</button>
+    <button onclick="exercicio2()">Exercicio2</button>
+    <button onclick="exercicio3()">Exercicio3</button>
+    <button onclick="showExercicio4()">Exercicio4</button>
+    <button onclick="limpar()">Limpar</button>
+  </div>
+
+  <div class="container">
+    <div class="title">Console</div>
+
+    <div class="root" id="root1"></div>
+    <div class="root" id="root2"></div>
+    <div class="root" id="root3"></div>
+    <div class="root" id="root4"></div>
+
+    <div class="Exercicio4" id="Exercicio4">
+      <input type="number" id="num1">
+      <input type="number" id="num2">
+      <button class="soma" onclick="somaExercio4()">Somar</button>
+    </div>
+  </div>
+
+  <script>
+    var numero = 11;
+ var intervalo;
+
+function exercicio1() {
+  var nota = parseInt(prompt("Digite um numero"));
+
+  while (nota < 0 || nota > 10) {
+    nota = parseInt(prompt("Digite novamente a nota"));
+  }
+  document.getElementById("root1").style.display = "block"
+  document.getElementById("root1").innerHTML = `<p>A sua nota: ${nota}</p>`;
+}
+
+function exercicio2() {
+  numero = 11;
+  intervalo = setInterval(() => {
+    numero--
+    document.getElementById("root2").style.display = "block"
+    document.getElementById("root2").innerHTML = `<p>Ano Novo em: ${numero}</p>`;
+
+    if (numero === 0) {
+      fecharintervalo();
+      document.getElementById("root2").innerHTML = `<p>Feliz Ano Novo!!!!!!</p>`;
+    }
+  }, 1000)
+}
+
+ function fecharintervalo() {
+    clearInterval(intervalo)
+  }
+
+function exercicio3() {
+  var kaike = prompt("Nome");
+  var kk = prompt("Senha");
+
+  while (kaike === kk) {
+    alert("Os campos estão iguais")
+    kaike = prompt("Nome");
+    kk = prompt("Senha");
+  }
+
+  document.getElementById("root3").style.display = "block"
+  document.getElementById("root3").innerHTML = `Nome:${kaike}<br> Senha:${kk}`;
+
+}
+
+var exercicio4 = document.getElementById("Exercicio4")
+
+function showExercicio4() {
+  exercicio4.style.display = "flex"
+}
+
+function somaExercio4() {
+  var num1 = document.getElementById("num1").value
+  var num2 = document.getElementById("num2").value
+
+  var resultado = parseInt(num1) + parseInt(num2);
+
+  document.getElementById("root4").style.display = "block"
+  document.getElementById("root4").innerHTML = resultado;
+}
+
+function limpar() {
+  document.getElementById("root1").style.display = "none"
+  document.getElementById("root2").style.display = "none"
+  document.getElementById("root3").style.display = "none"
+  document.getElementById("root4").style.display = "none"
+  exercicio4 = document.getElementById("Exercicio4").style.display = "none"
+  fecharintervalo()
+}
+  </script>
+</body>
+
+</html>
